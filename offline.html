@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Packs | TravelMind AI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">✦ TravelMind AI</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="itinerary.html">AI Planner</a>
+            <a href="offline.html" class="active">Travel Packs</a>
+            <a href="emergency.html">Emergency</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="page-header">
+
+            <p class="tagline">YOUR TRAVEL DATA, AVAILABLE OFFLINE</p>
+
+            <h1>Travel Packs</h1>
+
+            <p>
+                Download important travel information before your journey
+                and access it without an internet connection.
+            </p>
+
+        </section>
+
+
+        <section class="travel-pack-section">
+
+            <div class="pack-create">
+
+                <div class="pack-icon">
+                    📦
+                </div>
+
+                <h2>Create a Travel Pack</h2>
+
+                <p>
+                    Select a destination and prepare your essential
+                    travel information for offline access.
+                </p>
+
+                <label for="packDestination">
+                    Destination
+                </label>
+
+                <select id="packDestination">
+
+                    <option value="">
+                        Select destination
+                    </option>
+
+                    <option value="Manali">
+                        Manali
+                    </option>
+
+                    <option value="Goa">
+                        Goa
+                    </option>
+
+                    <option value="Jaipur">
+                        Jaipur
+                    </option>
+
+                    <option value="Delhi">
+                        Delhi
+                    </option>
+
+                </select>
+
+
+                <button id="downloadPackBtn">
+                    📥 Download Travel Pack
+                </button>
+
+            </div>
+
+
+            <div class="pack-details">
+
+                <div class="pack-title">
+
+                    <span>AVAILABLE INFORMATION</span>
+
+                    <h2>What your Travel Pack contains</h2>
+
+                </div>
+
+
+                <div class="pack-list">
+
+                    <div>
+                        <span>🗓️</span>
+                        <div>
+                            <h3>Itinerary</h3>
+                            <p>Your saved day-by-day travel plan.</p>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <span>📍</span>
+                        <div>
+                            <h3>Places</h3>
+                            <p>Important destinations and saved places.</p>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <span>🚌</span>
+                        <div>
+                            <h3>Transport</h3>
+                            <p>Basic transportation information.</p>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <span>🚨</span>
+                        <div>
+                            <h3>Emergency Information</h3>
+                            <p>Important emergency information.</p>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <span>📝</span>
+                        <div>
+                            <h3>Personal Notes</h3>
+                            <p>Your own saved travel notes.</p>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <span>📄</span>
+                        <div>
+                            <h3>Saved Documents</h3>
+                            <p>Important documents saved for the trip.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="offline-status">
+
+            <div class="offline-status-icon">
+                📡
+            </div>
+
+            <div>
+
+                <h2>Offline Mode</h2>
+
+                <p id="offlineStatus">
+                    Checking your connection...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>© 2026 TravelMind AI</p>
+
+        <p>
+            AI-powered • Offline-first • Built for travelers
+        </p>
+
+    </footer>
+
+
+    <script src="js/offline.js"></script>
+
+</body>
+</html>

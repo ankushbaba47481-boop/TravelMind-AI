@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Destinations | TravelMind AI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">✦ TravelMind AI</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="explore.html" class="active">Explore</a>
+            <a href="itinerary.html">AI Planner</a>
+            <a href="offline.html">Travel Packs</a>
+            <a href="emergency.html">Emergency</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="page-header">
+
+            <p class="tagline">DISCOVER YOUR NEXT DESTINATION</p>
+
+            <h1>Explore Destinations</h1>
+
+            <p>
+                Find places, explore travel information and create
+                your own Travel Pack.
+            </p>
+
+        </section>
+
+
+        <section class="destination-section">
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search destination..."
+                >
+            </div>
+
+
+            <div id="destinationContainer" class="destination-container">
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+                        🏔️
+                    </div>
+
+                    <div class="destination-content">
+
+                        <span>Himachal Pradesh</span>
+
+                        <h2>Manali</h2>
+
+                        <p>
+                            Mountains, valleys, adventure activities
+                            and beautiful landscapes.
+                        </p>
+
+                        <div class="destination-info">
+                            <span>📅 5 Days</span>
+                            <span>💰 ₹10,000</span>
+                        </div>
+
+                        <button
+                            onclick="selectDestination('Manali')">
+                            Explore Manali →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+                        🏖️
+                    </div>
+
+                    <div class="destination-content">
+
+                        <span>Goa, India</span>
+
+                        <h2>Goa</h2>
+
+                        <p>
+                            Beaches, coastal views, local food and
+                            relaxing travel experiences.
+                        </p>
+
+                        <div class="destination-info">
+                            <span>📅 4 Days</span>
+                            <span>💰 ₹8,000</span>
+                        </div>
+
+                        <button
+                            onclick="selectDestination('Goa')">
+                            Explore Goa →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+                        🏰
+                    </div>
+
+                    <div class="destination-content">
+
+                        <span>Rajasthan, India</span>
+
+                        <h2>Jaipur</h2>
+
+                        <p>
+                            Historic forts, palaces, culture and
+                            traditional Rajasthani experiences.
+                        </p>
+
+                        <div class="destination-info">
+                            <span>📅 3 Days</span>
+                            <span>💰 ₹6,000</span>
+                        </div>
+
+                        <button
+                            onclick="selectDestination('Jaipur')">
+                            Explore Jaipur →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+                        🏙️
+                    </div>
+
+                    <div class="destination-content">
+
+                        <span>India</span>
+
+                        <h2>Delhi</h2>
+
+                        <p>
+                            Historical monuments, markets, food and
+                            modern city experiences.
+                        </p>
+
+                        <div class="destination-info">
+                            <span>📅 2 Days</span>
+                            <span>💰 ₹4,000</span>
+                        </div>
+
+                        <button
+                            onclick="selectDestination('Delhi')">
+                            Explore Delhi →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>© 2026 TravelMind AI</p>
+
+        <p>
+            AI-powered • Offline-first • Built for travelers
+        </p>
+
+    </footer>
+
+
+    <script src="js/destinations.js"></script>
+
+</body>
+</html>

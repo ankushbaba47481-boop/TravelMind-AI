@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Planner | TravelMind AI</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        ✦ TravelMind AI
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="explore.html">
+            Explore
+        </a>
+
+        <a
+            href="itinerary.html"
+            class="active"
+        >
+            AI Planner
+        </a>
+
+        <a href="offline.html">
+            Travel Packs
+        </a>
+
+        <a href="emergency.html">
+            Emergency
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+
+<main>
+
+
+    <section class="page-header">
+
+        <p class="tagline">
+            PLAN • DISCOVER • TRAVEL
+        </p>
+
+        <h1>
+            Create Your Trip
+        </h1>
+
+        <p>
+            Build a personalized travel itinerary
+            with TravelMind AI.
+        </p>
+
+    </section>
+
+
+
+
+    <!-- ADVANCED AI -->
+
+    <section class="ai-section">
+
+        <div class="ai-card">
+
+            <p class="tagline">
+                ADVANCED AI
+            </p>
+
+            <h2>
+                🤖 Ask TravelMind AI
+            </h2>
+
+            <p>
+                Tell TravelMind what kind of trip you want
+                in your own words.
+            </p>
+
+
+            <div class="ai-input-box">
+
+                <input
+                    type="text"
+                    id="aiQuery"
+                    placeholder="e.g. 3 days Goa trip under ₹8000 for 2 people"
+                >
+
+
+                <button
+                    id="aiAskBtn"
+                >
+                    ✦ Ask AI
+                </button>
+
+            </div>
+
+
+            <div
+                id="aiResponse"
+                class="ai-response"
+            >
+
+                <p>
+                    💡 Try:
+                    <strong>
+                        "5 days Manali trip with ₹10000 budget for 2 people"
+                    </strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section class="planner-section">
+
+
+
+        <!-- LEFT: TRIP FORM -->
+
+        <div class="planner-form">
+
+            <h2>
+                Trip Details
+            </h2>
+
+
+            <label for="destination">
+                Destination
+            </label>
+
+            <input
+                type="text"
+                id="destination"
+                placeholder="e.g. Delhi"
+            >
+
+
+
+            <label for="days">
+                Trip Duration
+            </label>
+
+            <input
+                type="number"
+                id="days"
+                min="1"
+                max="30"
+                value="4"
+            >
+
+
+
+            <label for="budget">
+                Budget (₹)
+            </label>
+
+            <input
+                type="number"
+                id="budget"
+                min="0"
+                value="10000"
+            >
+
+
+
+            <label for="people">
+                Number of People
+            </label>
+
+            <input
+                type="number"
+                id="people"
+                min="1"
+                value="2"
+            >
+
+
+
+            <button
+                id="generateBtn"
+                onclick="generateItinerary()"
+            >
+                ✦ Generate Itinerary
+            </button>
+
+        </div>
+
+
+
+
+        <!-- RIGHT: RESULT -->
+
+        <div
+            id="itineraryResult"
+            class="itinerary-result"
+        >
+
+            <div class="empty-result">
+
+                <div>
+                    ✈️
+                </div>
+
+                <h2>
+                    Your Trip Will Appear Here
+                </h2>
+
+                <p>
+                    Enter your destination, duration
+                    and budget to create your itinerary.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+
+
+<footer>
+
+    <p>
+        © 2026 TravelMind AI
+    </p>
+
+    <p>
+        AI-powered • Offline-first • Built for travelers
+    </p>
+
+</footer>
+
+
+
+
+<!-- EXISTING ITINERARY JAVASCRIPT -->
+
+<script src="js/itinerary.js"></script>
+
+
+<!-- ADVANCED AI JAVASCRIPT -->
+
+<script src="js/ai.js"></script>
+
+
+</body>
+
+</html>
