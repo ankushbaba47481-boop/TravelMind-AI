@@ -1,11 +1,15 @@
+// ==========================================
 // TravelMind AI
 // Destination Data & Explore Page
+// ==========================================
 
 const destinations = [
+
     {
         name: "Manali",
         state: "Himachal Pradesh",
         icon: "🏔️",
+        image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85",
         description:
             "Mountains, valleys, adventure activities and beautiful landscapes.",
         days: 5,
@@ -14,8 +18,9 @@ const destinations = [
 
     {
         name: "Goa",
-        state: "India",
+        state: "Goa, India",
         icon: "🏖️",
+        image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=85",
         description:
             "Beaches, coastal views, local food and relaxing travel experiences.",
         days: 4,
@@ -24,8 +29,9 @@ const destinations = [
 
     {
         name: "Jaipur",
-        state: "Rajasthan",
+        state: "Rajasthan, India",
         icon: "🏰",
+        image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=900&q=85",
         description:
             "Historic forts, palaces, culture and traditional experiences.",
         days: 3,
@@ -34,17 +40,21 @@ const destinations = [
 
     {
         name: "Delhi",
-        state: "India",
+        state: "Delhi, India",
         icon: "🏙️",
+        image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=900&q=85",
         description:
             "Historical monuments, markets, food and modern city experiences.",
         days: 2,
         budget: 4000
     }
+
 ];
 
 
-// Display destinations
+// ==========================================
+// Display Destinations
+// ==========================================
 
 function displayDestinations(list = destinations) {
 
@@ -61,7 +71,7 @@ function displayDestinations(list = destinations) {
             <div class="empty-result">
                 <div>🔍</div>
                 <h2>No destination found</h2>
-                <p>Try another destination.</p>
+                <p>Try searching for another destination or state.</p>
             </div>
         `;
 
@@ -75,15 +85,26 @@ function displayDestinations(list = destinations) {
 
         card.className = "destination-card";
 
+
         card.innerHTML = `
 
             <div class="destination-image">
-                ${destination.icon}
+
+                <img
+                    src="${destination.image}"
+                    alt="${destination.name}"
+                    loading="lazy"
+                    onerror="this.style.display='none'; this.parentElement.innerHTML='<span>${destination.icon}</span>';"
+                >
+
             </div>
+
 
             <div class="destination-content">
 
-                <span>${destination.state}</span>
+                <span class="destination-state">
+                    ${destination.state}
+                </span>
 
                 <h2>${destination.name}</h2>
 
@@ -91,15 +112,22 @@ function displayDestinations(list = destinations) {
                     ${destination.description}
                 </p>
 
+
                 <div class="destination-info">
 
-                    <span>📅 ${destination.days} Days</span>
+                    <span>
+                        📅 ${destination.days} Days
+                    </span>
 
-                    <span>💰 ₹${destination.budget.toLocaleString("en-IN")}</span>
+                    <span>
+                        💰 ₹${destination.budget.toLocaleString("en-IN")}
+                    </span>
 
                 </div>
 
+
                 <button
+                    class="destination-button"
                     onclick="selectDestination('${destination.name}')">
 
                     Explore ${destination.name} →
@@ -107,14 +135,19 @@ function displayDestinations(list = destinations) {
                 </button>
 
             </div>
+
         `;
 
         container.appendChild(card);
+
     });
+
 }
 
 
-// Select destination
+// ==========================================
+// Select Destination
+// ==========================================
 
 function selectDestination(destinationName) {
 
@@ -124,10 +157,13 @@ function selectDestination(destinationName) {
     );
 
     window.location.href = "itinerary.html";
+
 }
 
 
-// Search destination
+// ==========================================
+// Search Destination
+// ==========================================
 
 function searchDestinations() {
 
@@ -136,24 +172,48 @@ function searchDestinations() {
 
     if (!input) return;
 
+
     const searchText =
         input.value.trim().toLowerCase();
 
+
     const filtered =
-        destinations.filter((destination) =>
-            destination.name.toLowerCase().includes(searchText) ||
-            destination.state.toLowerCase().includes(searchText)
-        );
+        destinations.filter((destination) => {
+
+            return (
+                destination.name
+                    .toLowerCase()
+                    .includes(searchText)
+
+                ||
+
+                destination.state
+                    .toLowerCase()
+                    .includes(searchText)
+
+                ||
+
+                destination.description
+                    .toLowerCase()
+                    .includes(searchText)
+            );
+
+        });
+
 
     displayDestinations(filtered);
+
 }
 
 
-// Page initialization
+// ==========================================
+// Page Initialization
+// ==========================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
     displayDestinations();
+
 
     const searchInput =
         document.getElementById("searchInput");
@@ -162,6 +222,8 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("searchBtn");
 
 
+    // Search while typing
+
     if (searchInput) {
 
         searchInput.addEventListener(
@@ -169,18 +231,26 @@ document.addEventListener("DOMContentLoaded", () => {
             searchDestinations
         );
 
+
+        // Press Enter
+
         searchInput.addEventListener(
             "keydown",
             (event) => {
 
                 if (event.key === "Enter") {
+
                     searchDestinations();
+
                 }
 
             }
         );
+
     }
 
+
+    // Search button
 
     if (searchBtn) {
 
@@ -188,6 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "click",
             searchDestinations
         );
+
     }
 
 });
