@@ -859,13 +859,10 @@ footer {
 .budget-total strong {
     color: #62e6c4;
 }
-/* =================================
-   PREMIUM DESTINATION CARDS
-================================= */
+
+/* Destination Card Hover Effect */
 
 .destination-card {
-    position: relative;
-    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -879,5 +876,5 @@ footer {
 }
 
 .destination-card:hover img {
-    transform: scale(1.06);
+    transform: scale(1.05);
 }
