@@ -878,3 +878,50 @@ footer {
 .destination-card:hover img {
     transform: scale(1.05);
 }
+/* =========================================
+   PREMIUM EXPLORE SEARCH
+========================================= */
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    max-width: 650px;
+    margin: 25px auto 35px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 15px 18px;
+    border: 1px solid #263c55;
+    border-radius: 12px;
+    background: #111a26;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+#searchInput::placeholder {
+    color: #7f8c9b;
+}
+
+#searchInput:focus {
+    border-color: #62e6c4;
+    box-shadow: 0 0 0 3px rgba(98, 230, 196, 0.10);
+}
+
+#searchBtn {
+    padding: 15px 24px;
+    border: none;
+    border-radius: 12px;
+    background: #62e6c4;
+    color: #071014;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#searchBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(98, 230, 196, 0.25);
+}
