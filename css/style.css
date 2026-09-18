@@ -925,3 +925,38 @@ footer {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(98, 230, 196, 0.25);
 }
+/* ==========================================
+   PREMIUM DESTINATION CARD HOVER
+   ========================================== */
+
+.destination-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.destination-card img {
+    display: block;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.06);
+}
+
+.destination-button {
+    cursor: pointer;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.destination-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
