@@ -54,6 +54,16 @@ const destinations = [
         days: 4,
         budget: 7000
     },
+    
+    {
+    name: "Samastipur",
+    state: "Bihar, India",
+    icon: "📍",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85",
+    description: "Explore Samastipur, local culture, history and nearby attractions.",
+    days: 2,
+    budget: 4000
+},
 
     {
         name: "Patna",
